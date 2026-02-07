@@ -41,34 +41,34 @@ platforms:
     name: "澎湃新闻"
   - id: "ifeng"
     name: "凤凰网"
-  - id: "cankaoxiaoxi"
-    name: "参考消息"
+  # - id: "cankaoxiaoxi"
+  #   name: "参考消息"
   - id: "sputniknewscn"
     name: "卫星通讯社"
   - id: "zaobao"
     name: "联合早报"
-  - id: "mktnews"
-    name: "MKT新闻"
-  - id: "kaopu"
-    name: "靠谱新闻"
+  # - id: "mktnews"
+  #   name: "MKT新闻"
+  # - id: "kaopu"
+  #   name: "靠谱新闻"
 
   # === 财经投资类 ===
-  - id: "wallstreetcn-hot"
-    name: "华尔街见闻 最热"
-  - id: "wallstreetcn-quick"
-    name: "华尔街见闻 快讯"
-  - id: "wallstreetcn-news"
-    name: "华尔街见闻 最新"
-  - id: "cls-hot"
-    name: "财联社热门"
-  - id: "gelonghui"
-    name: "格隆汇"
-  - id: "xueqiu"
-    name: "雪球"
-  - id: "jin10"
-    name: "金十数据"
-  - id: "fastbull"
-    name: "快讯通"
+  # - id: "wallstreetcn-hot"
+  #   name: "华尔街见闻 最热"
+  # - id: "wallstreetcn-quick"
+  #   name: "华尔街见闻 快讯"
+  # - id: "wallstreetcn-news"
+  #   name: "华尔街见闻 最新"
+  # - id: "cls-hot"
+  #   name: "财联社热门"
+  # - id: "gelonghui"
+  #   name: "格隆汇"
+  # - id: "xueqiu"
+  #   name: "雪球"
+  # - id: "jin10"
+  #   name: "金十数据"
+  # - id: "fastbull"
+  #   name: "快讯通"
 
   # === 社交/短视频/娱乐类 ===
   - id: "weibo"
@@ -107,8 +107,8 @@ platforms:
     name: "ProductHunt"
 
   # === 其他/工具类 ===
-  - id: "chongbuluo"
-    name: "虫部落"
+  # - id: "chongbuluo"
+  #   name: "虫部落"
 
 
 
@@ -187,7 +187,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "daily"                       # 可选: daily | current | incremental
+  mode: "current"                       # 可选: daily | current | incremental
   display_mode: "platform"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
@@ -233,12 +233,12 @@ display:
     new_items: true                   # 新增热点区域（含热榜新增 + RSS 新增）
                                       # 注：热点词汇统计中的新增标记🆕不受此配置影响
 
-    rss: true                         # RSS 订阅区域
+    rss: false                         # RSS 订阅区域
                                       # 开启后将对 RSS 进行关键词分析并在通知中展示
                                       # 关闭后跳过分析，但独立展示区不受影响
 
     standalone: false                 # 独立展示区（完整热榜/RSS，不受关键词过滤）
-    ai_analysis: true                 # AI 分析区域
+    ai_analysis: false                 # AI 分析区域
 
   # 📋 独立展示区配置（仅在 regions.standalone: true 时生效）
   # 用途：将指定平台的完整热榜/RSS 单独展示，不受关键词过滤影响
@@ -449,7 +449,7 @@ ai:
 # 模型配置见上方 ai 配置段
 # ===============================================================
 ai_analysis:
-  enabled: true                     # 是否启用 AI 分析
+  enabled: false                     # 是否启用 AI 分析
 
   # 🕐 AI 分析时间窗口控制（可选功能）
   # 用途：限制 AI 分析的时间范围，避免非必要时段消耗 API 额度
